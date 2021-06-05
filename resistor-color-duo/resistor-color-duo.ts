@@ -1,4 +1,4 @@
-const COLORS = [
+const colorArr = [
   'black',
   'brown',
   'red',
@@ -9,19 +9,23 @@ const COLORS = [
   'violet',
   'grey',
   'white',
-];
+] as const;
+
+// disallows passing other colors, 
+// e.g. 'pink' to constructor
+type Color = typeof colorArr[number];
 
 export class ResistorColor {
-  private colors: string[];
+  private colors: Color[];
 
-  constructor(colors: string[]) {
+  constructor(colors: Color[]) {
     this.colors = colors;
 
     this.validate();
   }
 
   value(): number {
-    return COLORS.indexOf(this.colors[0]) * 10 + COLORS.indexOf(this.colors[1]);
+    return colorArr.indexOf(this.colors[0]) * 10 + colorArr.indexOf(this.colors[1]);
   }
 
   validate(): void {
