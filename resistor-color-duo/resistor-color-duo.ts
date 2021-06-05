@@ -34,3 +34,7 @@ export class ResistorColor {
     }
   }
 }
+
+/** see this discussion:
+ * https://stackoverflow.com/questions/44480644/string-union-to-string-array
+ */
