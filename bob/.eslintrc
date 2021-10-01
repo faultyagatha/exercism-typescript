@@ -2,7 +2,7 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json",
+    "project": "./bob/tsconfig.json",
     "ecmaFeatures": {
       "jsx": true
     },
@@ -15,8 +15,14 @@
   },
   "overrides": [
     {
-      "files": [".meta/proof.ci.ts", ".meta/exemplar.ts", "*.test.ts"],
-      "excludedFiles": ["custom.test.ts"],
+      "files": [
+        ".meta/proof.ci.ts",
+        ".meta/exemplar.ts",
+        "*.test.ts"
+      ],
+      "excludedFiles": [
+        "custom.test.ts"
+      ],
       "extends": "@exercism/eslint-config-typescript/maintainers"
     }
   ]
