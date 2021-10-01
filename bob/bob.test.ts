@@ -66,57 +66,57 @@ describe('Bob', () => {
     expect(result).toEqual('Whoa, chill out!')
   })
 
-  xit('shouting with no exclamation mark', () => {
+  it('shouting with no exclamation mark', () => {
     const result = hey('I HATE THE DMV')
     expect(result).toEqual('Whoa, chill out!')
   })
 
-  xit('statement containing question mark', () => {
+  it('statement containing question mark', () => {
     const result = hey('Ending with ? means a question.')
     expect(result).toEqual('Whatever.')
   })
 
-  xit('prattling on', () => {
+  it('prattling on', () => {
     const result = hey('Wait! Hang on.  Are you going to be OK?')
     expect(result).toEqual('Sure.')
   })
 
-  xit('silence', () => {
+  it('silence', () => {
     const result = hey('')
     expect(result).toEqual('Fine. Be that way!')
   })
 
-  xit('prolonged silence', () => {
+  it('prolonged silence', () => {
     const result = hey('   ')
     expect(result).toEqual('Fine. Be that way!')
   })
 
-  xit('alternate silence', () => {
+  it('alternate silence', () => {
     const result = hey('\t\t\t\t\t\t\t\t\t\t')
     expect(result).toEqual('Fine. Be that way!')
   })
 
-  xit('multiple line question', () => {
+  it('multiple line question', () => {
     const result = hey('\nDoes this cryogenic chamber make me look fat?\nNo.')
     expect(result).toEqual('Whatever.')
   })
 
-  xit('starting with whitespace', () => {
+  it('starting with whitespace', () => {
     const result = hey('         hmmmmmmm...')
     expect(result).toEqual('Whatever.')
   })
 
-  xit('ending with whitespace', () => {
+  it('ending with whitespace', () => {
     const result = hey('Okay if like my  spacebar  quite a bit?   ')
     expect(result).toEqual('Sure.')
   })
 
-  xit('other whitespace', () => {
+  it('other whitespace', () => {
     const result = hey('\n\r \t')
     expect(result).toEqual('Fine. Be that way!')
   })
 
-  xit('non-question ending with whitespace', () => {
+  it('non-question ending with whitespace', () => {
     const result = hey('This is a statement ending with whitespace      ')
     expect(result).toEqual('Whatever.')
   })

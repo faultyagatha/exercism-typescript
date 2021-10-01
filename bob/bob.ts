@@ -1,16 +1,17 @@
 /** helpers */
+const hasLetters = /[a-zA-Z]/;
+const isSilence = (message: string): boolean => message === "";
 const isQuestion = (message: string): boolean => message.slice(-1) === '?';
-
-const isUpper = (message: string): boolean => message === message.toUpperCase();
-
-const isSilence = (message: string): boolean => message === " ";
-
-const hasLetters = /[^\W\d_]+/g;
+const isUpper = (message: string): boolean => {
+  if (hasLetters.test(message)) {
+    return message === message.toUpperCase();
+  }
+  return false;
+}
 
 export function hey(message: string): string {
   //preprocess the string
   message = message.trim();
-
 
   switch (true) {
     case isSilence(message):
