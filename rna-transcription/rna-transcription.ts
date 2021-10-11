@@ -22,3 +22,5 @@ class Transcriptor {
 }
 
 export default Transcriptor
+
+//https://exercism.org/tracks/typescript/exercises/rna-transcription/solutions/pads

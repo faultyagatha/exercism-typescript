@@ -27,3 +27,19 @@ export function hey(message: string): string {
   }
 }
 
+/**
+ * Alternative approach:
+ *
+ * const checklist = [{ rule: isSilence, response: 'Fine. Be that way!' }];
+
+  ...
+
+  checklist.forEach((item) => {
+    if (item.rule(message)) {
+      return item.response;
+    }
+  });
+
+  return 'Whatever';
+ */
+
